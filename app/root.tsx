@@ -8,11 +8,9 @@ import {
   ScrollRestoration,
 } from '@remix-run/react';
 import tailwindStylesheet from '~/styles/app.css';
-import sharedStyles from '~/styles/shared.css';
 
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: tailwindStylesheet },
-  { rel: 'stylesheet', href: sharedStyles },
 ];
 
 export default function App() {
@@ -24,7 +22,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className='bg-gradient-to-br from-[#8845fc] to-[#3c02a1] m-0 min-h-screen text-[#ded8e8]'>
         <Outlet />
         <ScrollRestoration />
         <Scripts />

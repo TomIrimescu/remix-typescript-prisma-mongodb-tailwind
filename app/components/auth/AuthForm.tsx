@@ -21,17 +21,37 @@ function AuthForm() {
   const isSubmitting = navigation.state !== 'idle';
 
   return (
-    <Form method='post' className='form' id='auth-form'>
-      <div className='icon-img'>
+    <Form
+      method='post'
+      className='p-8 text-center rounded-[8px] bg-[#975bfd] text-[#f6f2fc] shadow my-8 m-auto max-w-[22.0rem]'
+      id='auth-form'
+    >
+      <div className='icon-img text-2xl w-16 h-16 inline-flex justify-center items-center mb-4'>
         {authMode === 'login' ? <LockClosedIcon /> : <UserPlusIcon />}
       </div>
-      <p>
-        <label htmlFor='email'>Email Address</label>
-        <input type='email' id='email' name='email' required />
+      <p className='my-1 mx-0'>
+        <label className='block mb-2' htmlFor='email'>
+          Email Address
+        </label>
+        <input
+          className='block mb-2 p-2 rounded border-0 w-full text-[#69666f] text-center'
+          type='email'
+          id='email'
+          name='email'
+          required
+        />
       </p>
-      <p>
-        <label htmlFor='password'>Password</label>
-        <input type='password' id='password' name='password' minLength={7} />
+      <p className='my-1 mx-0'>
+        <label className='block mb-2' htmlFor='password'>
+          Password
+        </label>
+        <input
+          className='block mb-2 p-2 rounded border-0 w-full text-[#69666f]  text-center'
+          type='password'
+          id='password'
+          name='password'
+          minLength={7}
+        />
       </p>
       {validationErrors && (
         <ul>
@@ -40,11 +60,17 @@ function AuthForm() {
           ))}
         </ul>
       )}
-      <div className='form-actions'>
-        <button disabled={isSubmitting}>
+      <div className='mt-8 content-center flex flex-col gap-2'>
+        <button
+          className='disabled:bg-[#ded8e8] disabled:text-[#aba6b3] disabled:cursor-not-allowed hover:bg-[#8400ff] bg-[#9900ff] border-0 rounded-[30px] py-[0.65rem] p-8 text-[0.85rem] max-w-[9.0rem] m-auto'
+          disabled={isSubmitting}
+        >
           {isSubmitting ? 'Authenicating...' : submitBtnCaption}
         </button>
-        <Link to={authMode === 'login' ? '?mode=signup' : '?mode=login'}>
+        <Link
+          className='mt-2 text-[0.75rem] hover:text-[#c9aaff]'
+          to={authMode === 'login' ? '?mode=signup' : '?mode=login'}
+        >
           {toggleBtnCaption}
         </Link>
       </div>

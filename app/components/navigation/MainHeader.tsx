@@ -7,7 +7,7 @@ function MainHeader() {
   return (
     <header className='flex flex-row flex-wrap justify-evenly justify-items-center items-center mt-3'>
       <Logo />
-      <nav>
+      <nav className='mt-3'>
         <ul className='flex gap-8 flex-1'>
           <li className='mb-3 ml-3'>
             <NavLink className='hover:text-[#af82fc]' to='/'>
@@ -15,8 +15,13 @@ function MainHeader() {
             </NavLink>
           </li>
           <li className='mb-3'>
-            <NavLink className='hover:text-[#af82fc]' to='/pricing'>
-              Pricing
+            <NavLink className='hover:text-[#af82fc]' to='/'>
+              tbd
+            </NavLink>
+          </li>
+          <li className='mb-3'>
+            <NavLink className='hover:text-[#af82fc]' to='/'>
+              tbd
             </NavLink>
           </li>
         </ul>
