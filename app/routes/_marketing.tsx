@@ -1,4 +1,4 @@
-import { HeadersFunction, LinksFunction, LoaderArgs } from '@remix-run/node';
+import { HeadersFunction, LoaderArgs } from '@remix-run/node';
 import { Outlet } from '@remix-run/react';
 
 import MainHeader from '~/components/navigation/MainHeader';

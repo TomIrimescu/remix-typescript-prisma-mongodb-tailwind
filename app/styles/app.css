@@ -590,8 +590,8 @@ video {
   display: inline-flex;
 }
 
-.h-16 {
-  height: 4rem;
+.h-9 {
+  height: 2.25rem;
 }
 
 .min-h-screen {
@@ -600,6 +600,10 @@ video {
 
 .w-16 {
   width: 4rem;
+}
+
+.w-9 {
+  width: 2.25rem;
 }
 
 .w-full {
@@ -799,35 +803,6 @@ video {
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-
-/* :root {
-  --color-gray-10: #f6f2fc;
-  --color-gray-50: #f0eafa;
-  --color-gray-100: #ded8e8;
-  --color-gray-200: #c1bcc9;
-  --color-gray-300: #aba6b3;
-  --color-gray-400: #96929d;
-  --color-gray-500: #7f7b85;
-  --color-gray-600: #69666f;
-  --color-gray-700: #514f55;
-  --color-gray-800: #403e44;
-  --color-gray-900: #2e2c32;
-
-  --color-primary-10: #ede3fd;
-  --color-primary-50: #c9aaff;
-  --color-primary-100: #af82fc;
-  --color-primary-200: #975bfd;
-  --color-primary-300: #8845fc;
-  --color-primary-400: #7223fa;
-  --color-primary-500: #5d00ff;
-  --color-primary-600: #5402e3;
-  --color-primary-700: #4a02c6;
-  --color-primary-800: #3c02a1;
-
-  --color-secondary-500: #9900ff;
-  --color-secondary-600: #8400ff;
-  --color-secondary-700: #7500ce;
-} */
 
 @keyframes fade-slide-up {
   from {

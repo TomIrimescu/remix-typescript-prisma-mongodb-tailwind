@@ -1,11 +1,16 @@
-import { LoaderArgs, MetaFunction } from '@remix-run/node';
+import { LoaderArgs } from '@remix-run/node';
 import MainHeader from '~/components/navigation/MainHeader';
 import { getUserFromSession } from '~/data/auth.server';
 
-export const meta: MetaFunction = () => ({
-  name: 'description',
-  content: 'Remix Typescript Prisma Mongodb Tailwind',
-});
+export function meta() {
+  return [
+    { title: 'Home' },
+    { description: 'Welcome to the Home Page.' },
+    {
+      content: 'Remix Typescript Prisma Mongodb Tailwind',
+    },
+  ];
+}
 
 export default function Index() {
   return (

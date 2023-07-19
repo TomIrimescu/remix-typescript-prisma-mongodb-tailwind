@@ -26,7 +26,7 @@ function AuthForm() {
       className='p-8 text-center rounded-[8px] bg-[#975bfd] text-[#f6f2fc] shadow my-8 m-auto max-w-[22.0rem]'
       id='auth-form'
     >
-      <div className='icon-img text-2xl w-16 h-16 inline-flex justify-center items-center mb-4'>
+      <div className='icon-img text-2xl w-9 h-9 inline-flex justify-center items-center mb-4'>
         {authMode === 'login' ? <LockClosedIcon /> : <UserPlusIcon />}
       </div>
       <p className='my-1 mx-0'>
@@ -46,7 +46,7 @@ function AuthForm() {
           Password
         </label>
         <input
-          className='block mb-2 p-2 rounded border-0 w-full text-[#69666f]  text-center'
+          className='block mb-2 p-2 rounded border-0 w-full text-[#69666f] text-center'
           type='password'
           id='password'
           name='password'

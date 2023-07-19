@@ -1,6 +1,6 @@
 // @ts-nocheck
 
-import { ActionArgs, HeadersFunction, MetaFunction } from '@remix-run/node';
+import { ActionArgs, HeadersFunction } from '@remix-run/node';
 import AuthForm from '~/components/auth/AuthForm';
 import { signup, login } from '~/data/auth.server';
 import { validateCredentials } from '~/data/validation.server';
@@ -36,10 +36,15 @@ export async function action({ request }: ActionArgs) {
   }
 }
 
-export const meta: MetaFunction = () => ({
-  title: 'Login | Signup',
-  description: 'Login or register.',
-});
+export function meta() {
+  return [
+    { title: 'Login | Signup' },
+    { description: 'Login or register.' },
+    {
+      content: 'Remix Typescript Prisma Mongodb Tailwind',
+    },
+  ];
+}
 
 export const headers: HeadersFunction = ({ parentHeaders }) => ({
   'Cache-Control': parentHeaders.get('Cache-Control'), // 60 minutes
