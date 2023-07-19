@@ -26,8 +26,12 @@ function AuthForm() {
       className='p-8 text-center rounded-[8px] bg-[#975bfd] text-[#f6f2fc] shadow my-8 m-auto max-w-[22.0rem]'
       id='auth-form'
     >
-      <div className='icon-img text-2xl w-9 h-9 inline-flex justify-center items-center mb-4'>
-        {authMode === 'login' ? <LockClosedIcon /> : <UserPlusIcon />}
+      <div className='icon-img text-2xl w-14 h-14 inline-flex justify-center items-center mb-4 border-2 border-[#ede3fd] rounded-[50%]'>
+        {authMode === 'login' ? (
+          <LockClosedIcon className='w-6 h-6' />
+        ) : (
+          <UserPlusIcon className='w-6 h-6' />
+        )}
       </div>
       <p className='my-1 mx-0'>
         <label className='block mb-2' htmlFor='email'>
