@@ -1,4 +1,5 @@
 import { LoaderArgs } from '@remix-run/node';
+import { useRouteError, isRouteErrorResponse } from '@remix-run/react';
 import MainHeader from '~/components/navigation/MainHeader';
 import { getUserFromSession } from '~/data/auth.server';
 
@@ -10,6 +11,21 @@ export function meta() {
       content: 'Remix Typescript Prisma Mongodb Tailwind',
     },
   ];
+}
+
+export function ErrorBoundary() {
+  const error = useRouteError();
+
+  // when true, this is what used to go to `CatchBoundary`
+  if (isRouteErrorResponse(error)) {
+    return (
+      <div>
+        <h1>Oops</h1>
+        <p>Status: {error.status}</p>
+        <p>{error.data.message}</p>
+      </div>
+    );
+  }
 }
 
 export default function Index() {
